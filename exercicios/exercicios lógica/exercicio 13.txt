@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class MeuPrograma {
+
+    public static void main(String[] args){
+
+        Scanner scanner = new Scanner(System.in);
+
+        int maior = -999999;
+        int menor = 999999;
+        int valor=1;
+        double media;
+        int contador=0;
+        int acumulador=0;
+
+        while( valor > 0 ){
+
+            System.out.print("digite a media: ");
+            valor = scanner.nextInt();
+            contador++;
+            acumulador = acumulador + valor;
+
+            if( valor < menor ){
+                menor = valor;
+            }
+
+            if( valor > maior ){
+                maior = valor;
+            }
+
+        }
+
+        media = ( acumulador / contador );
+
+        System.out.println("A maior média digitada é " + maior);
+        System.out.println("A menor média digitada é " + menor);
+        System.out.println("A média da turma é " + media);
+
+    }
+
+}

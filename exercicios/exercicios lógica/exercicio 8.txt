@@ -1,0 +1,30 @@
+
+import java.util.Scanner;
+
+public class MeuPrograma {
+
+    public static void main(String[] args) {
+
+        double massa;
+        double massaInicial;
+        double segundos = 0;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite o valor de massa: ");
+        massa = scanner.nextDouble();
+        massaInicial = massa;
+
+        while ( massa >= 0.5 ){
+
+            segundos = segundos + 50;
+            massa = massa - 0.5;
+
+        }
+        System.out.println("Massa inicial: " + massaInicial );
+        System.out.println("Massa final: " + massa );
+        System.out.println("Tempo em horas: " + segundos / 60 / 60 );
+        System.out.println("Tempo em minutos: " + segundos / 60  );
+        System.out.println("Tempo em segundos: " + segundos  );
+    }
+
+}

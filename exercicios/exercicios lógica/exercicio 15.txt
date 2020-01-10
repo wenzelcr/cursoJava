@@ -1,0 +1,44 @@
+
+import java.util.Scanner;
+
+public class MeuPrograma {
+
+    public static void main(String[] args) {
+
+        double valorDigitado;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite o valor : ");
+        valorDigitado = scanner.nextDouble();
+
+        if ( ehPrimo( valorDigitado )){
+            System.out.println("É primo");
+        }else{
+            System.out.println("Não é primo");
+        }
+
+    }
+
+    public static boolean ehPrimo( double valorATestar ) {
+
+        boolean primo = false;
+        double contador = 0;
+        double numeros = 2;
+
+        if ( valorATestar == 1) {
+            return false;
+        }
+
+        while ((numeros < valorATestar) && (contador == 0)) {
+
+            if ((valorATestar % numeros) == 0) {
+                contador++;
+            }
+            numeros++;
+        }
+        if (contador == 0) {
+            primo = true;
+        }
+        return primo;
+    }
+
+}

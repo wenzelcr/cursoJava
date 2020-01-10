@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class MeuPrograma {
+
+    public static void main(String[] args){
+
+        Scanner scanner = new Scanner(System.in);
+
+        int maior = -999999;
+        int menor = 999999;
+        int valor;
+
+        for (int i = 1; i < 6; i++){
+
+            System.out.print("digite o número " + i + ": ");
+            valor = scanner.nextInt();
+
+            if( valor < menor ){
+                menor = valor;
+            }
+
+            if( valor > maior ){
+                maior = valor;
+            }
+
+        }
+
+        System.out.println("O maior valor digitado é " + maior);
+        System.out.println("O menor valor digitado é " + menor);
+
+    }
+
+}

@@ -1,0 +1,31 @@
+
+import java.util.Scanner;
+
+public class MeuPrograma {
+
+    public static void main(String[] args) {
+
+        double valorDigitado=0;
+        double pares = 0;
+        double impares = 0;
+        Scanner scanner = new Scanner(System.in);
+
+        while( valorDigitado <= 1000 ){
+
+            System.out.print("Digite o valor : ");
+            valorDigitado = scanner.nextDouble();
+
+            if((valorDigitado%2)==0){
+                pares = pares + valorDigitado;
+            }else{
+                impares = impares + valorDigitado;
+            }
+
+        }
+
+        System.out.println("Números pares:" + pares);
+        System.out.println("Números ímpares:" + impares);
+
+    }
+
+}

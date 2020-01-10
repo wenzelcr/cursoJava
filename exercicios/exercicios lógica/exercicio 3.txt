@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class MeuPrograma {
+
+    public static void main(String[] args){
+
+        //Scanner scanner = new Scanner(System.in);
+        double valor = 0.06;
+        int contador = 0;
+
+        System.out.println("Valor do Xerox R$ " + valor);
+
+        while( contador < 200 ){
+
+            contador++;
+            System.out.println( contador + " = " + valor);
+            valor = valor + 0.06;
+
+        }
+
+    }
+
+}

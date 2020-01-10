@@ -1,0 +1,33 @@
+
+import java.util.Scanner;
+
+public class MeuPrograma {
+
+    public static void main(String[] args) {
+
+        double valorInicial=0;
+        double valorFinal=0;
+        double dias=0;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o ano inicial: ");
+        valorInicial = scanner.nextDouble();
+
+        System.out.print("Digite o ano final: ");
+        valorFinal = scanner.nextDouble();
+
+        for (double i = valorInicial ;i <= valorFinal;i++){
+
+            if( ( i%4 ) == 0 ){
+                dias = dias + 366;
+            }else{
+                dias = dias + 365;
+            }
+        }
+
+        System.out.println("Foram decorridos:" + dias + "dias");
+
+    }
+
+}
